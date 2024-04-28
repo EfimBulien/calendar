@@ -1,0 +1,30 @@
+C:\Users\efimb\Downloads\calendar-master\bin\Debug\net8.0-windows\Будни Программиста.exe
+C:\Users\efimb\Downloads\calendar-master\bin\Debug\net8.0-windows\Будни Программиста.deps.json
+C:\Users\efimb\Downloads\calendar-master\bin\Debug\net8.0-windows\Будни Программиста.runtimeconfig.json
+C:\Users\efimb\Downloads\calendar-master\bin\Debug\net8.0-windows\Будни Программиста.dll
+C:\Users\efimb\Downloads\calendar-master\bin\Debug\net8.0-windows\Будни Программиста.pdb
+C:\Users\efimb\Downloads\calendar-master\bin\Debug\net8.0-windows\MaterialDesignColors.dll
+C:\Users\efimb\Downloads\calendar-master\bin\Debug\net8.0-windows\MaterialDesignThemes.Wpf.dll
+C:\Users\efimb\Downloads\calendar-master\bin\Debug\net8.0-windows\Microsoft.Xaml.Behaviors.dll
+C:\Users\efimb\Downloads\calendar-master\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\efimb\Downloads\calendar-master\obj\Debug\net8.0-windows\Будни Программиста.csproj.AssemblyReference.cache
+C:\Users\efimb\Downloads\calendar-master\obj\Debug\net8.0-windows\App.baml
+C:\Users\efimb\Downloads\calendar-master\obj\Debug\net8.0-windows\View\MainWindow.g.cs
+C:\Users\efimb\Downloads\calendar-master\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\efimb\Downloads\calendar-master\obj\Debug\net8.0-windows\Будни Программиста_MarkupCompile.cache
+C:\Users\efimb\Downloads\calendar-master\obj\Debug\net8.0-windows\View\MainWindow.baml
+C:\Users\efimb\Downloads\calendar-master\obj\Debug\net8.0-windows\Будни Программиста.g.resources
+C:\Users\efimb\Downloads\calendar-master\obj\Debug\net8.0-windows\Будни Программиста.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\efimb\Downloads\calendar-master\obj\Debug\net8.0-windows\Будни Программиста.AssemblyInfoInputs.cache
+C:\Users\efimb\Downloads\calendar-master\obj\Debug\net8.0-windows\Будни Программиста.AssemblyInfo.cs
+C:\Users\efimb\Downloads\calendar-master\obj\Debug\net8.0-windows\Будни Программиста.csproj.CoreCompileInputs.cache
+C:\Users\efimb\Downloads\calendar-master\obj\Debug\net8.0-windows\Будни Пр.9BA9A53F.Up2Date
+C:\Users\efimb\Downloads\calendar-master\obj\Debug\net8.0-windows\Будни Программиста.dll
+C:\Users\efimb\Downloads\calendar-master\obj\Debug\net8.0-windows\refint\Будни Программиста.dll
+C:\Users\efimb\Downloads\calendar-master\obj\Debug\net8.0-windows\Будни Программиста.pdb
+C:\Users\efimb\Downloads\calendar-master\obj\Debug\net8.0-windows\Будни Программиста.genruntimeconfig.cache
+C:\Users\efimb\Downloads\calendar-master\obj\Debug\net8.0-windows\ref\Будни Программиста.dll
+C:\Users\efimb\Downloads\calendar-master\obj\Debug\net8.0-windows\View\DaysPage.baml
+C:\Users\efimb\Downloads\calendar-master\obj\Debug\net8.0-windows\View\DaysPage.g.cs
+C:\Users\efimb\Downloads\calendar-master\obj\Debug\net8.0-windows\DayCardView.baml
+C:\Users\efimb\Downloads\calendar-master\obj\Debug\net8.0-windows\DayCardView.g.cs

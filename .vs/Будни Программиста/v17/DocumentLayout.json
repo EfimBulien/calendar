@@ -1,0 +1,153 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\efimb\\Downloads\\calendar-master\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FB1B5369-8E28-4BDA-9142-D272505DCA60}|\u0411\u0443\u0434\u043D\u0438 \u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0441\u0442\u0430.csproj|c:\\users\\efimb\\downloads\\calendar-master\\view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{FB1B5369-8E28-4BDA-9142-D272505DCA60}|\u0411\u0443\u0434\u043D\u0438 \u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0441\u0442\u0430.csproj|solutionrelative:view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB1B5369-8E28-4BDA-9142-D272505DCA60}|\u0411\u0443\u0434\u043D\u0438 \u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0441\u0442\u0430.csproj|c:\\users\\efimb\\downloads\\calendar-master\\view\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB1B5369-8E28-4BDA-9142-D272505DCA60}|\u0411\u0443\u0434\u043D\u0438 \u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0441\u0442\u0430.csproj|solutionrelative:view\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB1B5369-8E28-4BDA-9142-D272505DCA60}|\u0411\u0443\u0434\u043D\u0438 \u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0441\u0442\u0430.csproj|c:\\users\\efimb\\downloads\\calendar-master\\view\\dayspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{FB1B5369-8E28-4BDA-9142-D272505DCA60}|\u0411\u0443\u0434\u043D\u0438 \u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0441\u0442\u0430.csproj|solutionrelative:view\\dayspage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB1B5369-8E28-4BDA-9142-D272505DCA60}|\u0411\u0443\u0434\u043D\u0438 \u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0441\u0442\u0430.csproj|c:\\users\\efimb\\downloads\\calendar-master\\view\\dayspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB1B5369-8E28-4BDA-9142-D272505DCA60}|\u0411\u0443\u0434\u043D\u0438 \u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0441\u0442\u0430.csproj|solutionrelative:view\\dayspage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB1B5369-8E28-4BDA-9142-D272505DCA60}|\u0411\u0443\u0434\u043D\u0438 \u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0441\u0442\u0430.csproj|c:\\users\\efimb\\downloads\\calendar-master\\daycardview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{FB1B5369-8E28-4BDA-9142-D272505DCA60}|\u0411\u0443\u0434\u043D\u0438 \u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0441\u0442\u0430.csproj|solutionrelative:daycardview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB1B5369-8E28-4BDA-9142-D272505DCA60}|\u0411\u0443\u0434\u043D\u0438 \u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0441\u0442\u0430.csproj|c:\\users\\efimb\\downloads\\calendar-master\\viewmodel\\dayspageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB1B5369-8E28-4BDA-9142-D272505DCA60}|\u0411\u0443\u0434\u043D\u0438 \u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0441\u0442\u0430.csproj|solutionrelative:viewmodel\\dayspageviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB1B5369-8E28-4BDA-9142-D272505DCA60}|\u0411\u0443\u0434\u043D\u0438 \u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0441\u0442\u0430.csproj|c:\\users\\efimb\\downloads\\calendar-master\\daycardview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB1B5369-8E28-4BDA-9142-D272505DCA60}|\u0411\u0443\u0434\u043D\u0438 \u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0441\u0442\u0430.csproj|solutionrelative:daycardview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB1B5369-8E28-4BDA-9142-D272505DCA60}|\u0411\u0443\u0434\u043D\u0438 \u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0441\u0442\u0430.csproj|c:\\users\\efimb\\downloads\\calendar-master\\viewmodel\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB1B5369-8E28-4BDA-9142-D272505DCA60}|\u0411\u0443\u0434\u043D\u0438 \u041F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u0438\u0441\u0442\u0430.csproj|solutionrelative:viewmodel\\mainwindowviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "DayCardView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\efimb\\Downloads\\calendar-master\\DayCardView.xaml.cs",
+              "RelativeDocumentMoniker": "DayCardView.xaml.cs",
+              "ToolTip": "C:\\Users\\efimb\\Downloads\\calendar-master\\DayCardView.xaml.cs",
+              "RelativeToolTip": "DayCardView.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-28T12:11:38.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DayCardView.xaml",
+              "DocumentMoniker": "C:\\Users\\efimb\\Downloads\\calendar-master\\DayCardView.xaml",
+              "RelativeDocumentMoniker": "DayCardView.xaml",
+              "ToolTip": "C:\\Users\\efimb\\Downloads\\calendar-master\\DayCardView.xaml",
+              "RelativeToolTip": "DayCardView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-28T11:19:05.635Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DaysPageViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\efimb\\Downloads\\calendar-master\\ViewModel\\DaysPageViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\DaysPageViewModel.cs",
+              "ToolTip": "C:\\Users\\efimb\\Downloads\\calendar-master\\ViewModel\\DaysPageViewModel.cs",
+              "RelativeToolTip": "ViewModel\\DaysPageViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T19:10:36.416Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DaysPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\efimb\\Downloads\\calendar-master\\View\\DaysPage.xaml.cs",
+              "RelativeDocumentMoniker": "View\\DaysPage.xaml.cs",
+              "ToolTip": "C:\\Users\\efimb\\Downloads\\calendar-master\\View\\DaysPage.xaml.cs",
+              "RelativeToolTip": "View\\DaysPage.xaml.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAYwCYAAAApAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T18:25:08.065Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DaysPage.xaml",
+              "DocumentMoniker": "C:\\Users\\efimb\\Downloads\\calendar-master\\View\\DaysPage.xaml",
+              "RelativeDocumentMoniker": "View\\DaysPage.xaml",
+              "ToolTip": "C:\\Users\\efimb\\Downloads\\calendar-master\\View\\DaysPage.xaml",
+              "RelativeToolTip": "View\\DaysPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-25T18:16:55.334Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\efimb\\Downloads\\calendar-master\\View\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "View\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\efimb\\Downloads\\calendar-master\\View\\MainWindow.xaml.cs",
+              "RelativeToolTip": "View\\MainWindow.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-25T17:39:38.442Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\efimb\\Downloads\\calendar-master\\View\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "View\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\efimb\\Downloads\\calendar-master\\View\\MainWindow.xaml",
+              "RelativeToolTip": "View\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-25T17:39:36.879Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MainWindowViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\efimb\\Downloads\\calendar-master\\ViewModel\\MainWindowViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModel\\MainWindowViewModel.cs",
+              "ToolTip": "C:\\Users\\efimb\\Downloads\\calendar-master\\ViewModel\\MainWindowViewModel.cs",
+              "RelativeToolTip": "ViewModel\\MainWindowViewModel.cs",
+              "ViewState": "AQIAAFMAAAAAAAAAAAAUwAoAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T09:36:22.304Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
