@@ -12,8 +12,6 @@ public partial class SelectLanguagesWindow
     public SelectLanguagesWindow()
     {
         InitializeComponent();
-        Uri uri = new Uri("\\bin\\Debug\\net8.0-windows\\cpp.png", UriKind.Relative);
-        CPP.Source = new BitmapImage(uri);
         DataContext = new SelectLanguagesWindowViewModel();
     }
 

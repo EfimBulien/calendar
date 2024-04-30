@@ -14,6 +14,12 @@
                    VerticalAlignment="Center" HorizontalAlignment="Center"/>
         <Button Grid.Row="1" x:Name="CurrentDayImage" Command="{Binding SelectLanguagesCommand}" 
                 Background="{Binding CurrentDayImage}">
+            <Button.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Посмотреть этот день"/>
+                    <MenuItem Header="Очистить все об этом дне"/>
+                </ContextMenu>
+            </Button.ContextMenu>
         </Button>
     </Grid>
 </UserControl>

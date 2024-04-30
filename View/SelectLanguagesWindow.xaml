@@ -36,12 +36,17 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <CheckBox x:Name="aaa" Style="{StaticResource MaterialDesignFilterChipCheckBox}" Content="С++" Grid.Column="0" Grid.Row="0"></CheckBox>
-            <CheckBox Style="{StaticResource MaterialDesignFilterChipCheckBox}" Content="CheckBox" Grid.Column="0" Grid.Row="1"></CheckBox>
-            <CheckBox Style="{StaticResource MaterialDesignFilterChipCheckBox}" Content="CheckBox" Grid.Column="0" Grid.Row="2"></CheckBox>
-            <CheckBox Style="{StaticResource MaterialDesignFilterChipCheckBox}" Content="CheckBox" Grid.Column="0" Grid.Row="3"></CheckBox>
-            <CheckBox Style="{StaticResource MaterialDesignFilterChipCheckBox}" Content="CheckBox" Grid.Column="0" Grid.Row="4"></CheckBox>
-            <CheckBox Style="{StaticResource MaterialDesignFilterChipCheckBox}" Content="CheckBox" Grid.Column="0" Grid.Row="5"></CheckBox>
-            <Image x:Name="CPP" Grid.Column="1" Grid.Row="0"/>
+            <CheckBox Style="{StaticResource MaterialDesignFilterChipCheckBox}" Content="Java" Grid.Column="0" Grid.Row="1"></CheckBox>
+            <CheckBox Style="{StaticResource MaterialDesignFilterChipCheckBox}" Content="Python" Grid.Column="0" Grid.Row="2"></CheckBox>
+            <CheckBox Style="{StaticResource MaterialDesignFilterChipCheckBox}" Content="JavaScript" Grid.Column="0" Grid.Row="3"></CheckBox>
+            <CheckBox Style="{StaticResource MaterialDesignFilterChipCheckBox}" Content="C#" Grid.Column="0" Grid.Row="4"></CheckBox>
+            <CheckBox Style="{StaticResource MaterialDesignFilterChipCheckBox}" Content="Assembler" Grid.Column="0" Grid.Row="5"></CheckBox>
+            <Image Source="C:\Users\efimb\Documents\GitHub\calendar\bin\Debug\net8.0-windows\cpp.png" Grid.Column="1" Grid.Row="0"/>
+            <Image Source="C:\Users\efimb\Documents\GitHub\calendar\bin\Debug\net8.0-windows\java.png" Grid.Column="1" Grid.Row="1"/>
+            <Image Source="C:\Users\efimb\Documents\GitHub\calendar\bin\Debug\net8.0-windows\python.png" Grid.Column="1" Grid.Row="2"/>
+            <Image Source="C:\Users\efimb\Documents\GitHub\calendar\bin\Debug\net8.0-windows\js.png" Grid.Column="1" Grid.Row="3"/>
+            <Image Source="C:\Users\efimb\Documents\GitHub\calendar\bin\Debug\net8.0-windows\csharp.png" Grid.Column="1" Grid.Row="4"/>
+            <Image Source="C:\Users\efimb\Documents\GitHub\calendar\bin\Debug\net8.0-windows\asm.png" Grid.Column="1" Grid.Row="5"/>
 
         </Grid>
     </Grid>
