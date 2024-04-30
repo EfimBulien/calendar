@@ -20,7 +20,7 @@ namespace Будни_Программиста.ViewModel
                 if (selectedMonth != value)
                 {
                     selectedMonth = value;
-                    OnPropertyChanged(nameof(SelectedMonth));
+                    OnPropertyChanged();
                 }
             }
         }
@@ -88,7 +88,7 @@ namespace Будни_Программиста.ViewModel
                 datesChoices[Convert.ToInt32(choices[0])].Languages = languages;
                 return;
             }
-            datesChoices.Add(DatesChoice.Create(date.ToString(), languages));
+            datesChoices.Add(DatesChoice.Create(date, languages));
             Files.Serialize(datesChoices, Path);
         }
 

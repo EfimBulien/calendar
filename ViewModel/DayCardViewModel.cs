@@ -1,5 +1,5 @@
-using System.Windows;
 using System.Windows.Input;
+using Будни_Программиста.View;
 using Будни_Программиста.ViewModel.Helpers;
 
 namespace Будни_Программиста.ViewModel;
@@ -15,6 +15,7 @@ internal class DayCardViewModel : BindingHelper
 
     private void ExecuteSelectLanguages(object parameter)
     {
-        MessageBox.Show("команда работает");
+        var selectLanguages = new SelectLanguagesWindow();
+        selectLanguages.ShowDialog();
     }
 }

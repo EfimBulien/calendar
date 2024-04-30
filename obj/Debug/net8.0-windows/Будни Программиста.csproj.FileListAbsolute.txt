@@ -120,3 +120,7 @@ C:\Users\efimb\Documents\GitHub\calendar\obj\Debug\net8.0-windows\refint\Буд�
 C:\Users\efimb\Documents\GitHub\calendar\obj\Debug\net8.0-windows\Будни Программиста.pdb
 C:\Users\efimb\Documents\GitHub\calendar\obj\Debug\net8.0-windows\Будни Программиста.genruntimeconfig.cache
 C:\Users\efimb\Documents\GitHub\calendar\obj\Debug\net8.0-windows\ref\Будни Программиста.dll
+C:\Users\efimb\Documents\GitHub\calendar\obj\Debug\net8.0-windows\View\SelectLanguagesWindow.g.cs
+C:\Users\efimb\Documents\GitHub\calendar\obj\Debug\net8.0-windows\View\SelectLanguagesWindow.baml
+C:\Users\efimb\Documents\GitHub\calendar\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
+C:\Users\efimb\Documents\GitHub\calendar\obj\Debug\net8.0-windows\Будни Программиста_MarkupCompile.lref
