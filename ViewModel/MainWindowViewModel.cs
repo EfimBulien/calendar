@@ -1,5 +1,4 @@
-﻿using generator.ViewModels.Helpers;
-using System.IO;
+﻿using System.IO;
 using System.Windows.Input;
 using Будни_Программиста.Model;
 using Будни_Программиста.ViewModel.Helpers;
@@ -8,10 +7,10 @@ namespace Будни_Программиста.ViewModel
 {
     internal class MainWindowViewModel : BindingHelper
     {
-        private List<DatesChoice> datesChoices = [];
+        public List<DatesChoice> datesChoices = [];
         public static List<Language> default_languages = [];
-        private DateTime selectedMonth;
-        readonly string path = "data.json";
+        public DateTime selectedMonth;
+        private const string Path = "data.json";
 
         public DateTime SelectedMonth
         {
@@ -25,7 +24,7 @@ namespace Будни_Программиста.ViewModel
                 }
             }
         }
-
+      
         public ICommand PreviousMonthCommand { get; private set; }
         public ICommand NextMonthCommand { get; private set; }
 
@@ -55,11 +54,11 @@ namespace Будни_Программиста.ViewModel
             default_languages.Add(Language.Create("C#", "csharp.png"));
             default_languages.Add(Language.Create("Assembler", "asm.png"));
             default_languages.Add(Language.Create("None", "none.jpg", true));
-            if (!File.Exists(path))
+            if (!File.Exists(Path))
             {
-                File.Create(path).Close();
+                File.Create(Path).Close();
             }
-            datesChoices = Files.Deserialize<List<DatesChoice>>(path);
+            datesChoices = Files.Deserialize<List<DatesChoice>>(Path);
         }
 
         private List<object> GetChoiceByDate(string date)
@@ -74,14 +73,14 @@ namespace Будни_Программиста.ViewModel
             return [];
         }
 
-        public List<Language> GetCurrentDay(string date)
+        public List<Language>? GetCurrentDay(string date)
         {
             List<object> choices = GetChoiceByDate(date);
             if (choices.Count > 0) return datesChoices[Convert.ToInt32(choices[0])].Languages;
             return [];
         }
 
-        private void SaveDay(string date, List<Language> languages)
+        private void SaveDay(string date, List<Language>? languages)
         {
             List<object> choices = GetChoiceByDate(date);
             if (choices.Count > 0)
@@ -90,14 +89,14 @@ namespace Будни_Программиста.ViewModel
                 return;
             }
             datesChoices.Add(DatesChoice.Create(date.ToString(), languages));
-            Files.Serialize(datesChoices, path);
+            Files.Serialize(datesChoices, Path);
         }
 
         private void ClearDay(string date)
         {
             List<object> choices = GetChoiceByDate(date);
             if (choices.Count > 0) datesChoices.Remove((DatesChoice)choices[1]);
-            Files.Serialize(datesChoices, path);
+            Files.Serialize(datesChoices, Path);
         }
     }
 }

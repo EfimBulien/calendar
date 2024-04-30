@@ -3,17 +3,17 @@ using System.IO;
 
 namespace Будни_Программиста.Model
 {
-    internal class Files
+    internal static class Files
     {
         public static void Serialize<T>(T type, string path)
         {
-            string json = JsonConvert.SerializeObject(type);
+            var json = JsonConvert.SerializeObject(type);
             File.WriteAllText(path, json);
         }
-        public static T Deserialize<T>(string path)
+        public static T? Deserialize<T>(string path)
         {
-            string json = File.ReadAllText(path);
-            T type = JsonConvert.DeserializeObject<T>(json);
+            var json = File.ReadAllText(path);
+            var type = JsonConvert.DeserializeObject<T>(json);
             return type;
         }
     }

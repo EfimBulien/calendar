@@ -2,15 +2,17 @@
 {
     internal class DatesChoice
     {
-        public string Date;
-        public List<Language> Languages;
+        public string? Date;
+        public List<Language>? Languages;
 
-        public static DatesChoice Create(string date, List<Language> languages)
+        public static DatesChoice Create(string? date, List<Language>? languages)
         {
-            DatesChoice new_date = new DatesChoice();
-            new_date.Date = date;
-            new_date.Languages = languages;
-            return new_date;
+            var newDate = new DatesChoice
+            {
+                Date = date,
+                Languages = languages
+            };
+            return newDate;
         }
     }
 }

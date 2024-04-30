@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="Будни_Программиста.DayCardView"
+﻿<UserControl x:Class="Будни_Программиста.View.DayCardView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -10,9 +10,10 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <TextBlock x:Name="CurrentDayText" Grid.Row="0" Text="{Binding Day}" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        <Button x:Name="CurrentDayImage" Grid.Row="1">
-            
+        <TextBlock Grid.Row="0" x:Name="CurrentDayText" Text="{Binding Day}" FontSize="20" 
+                   VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Button Grid.Row="1" x:Name="CurrentDayImage" Command="{Binding SelectLanguagesCommand}" 
+                Background="{Binding CurrentDayImage}">
         </Button>
     </Grid>
 </UserControl>

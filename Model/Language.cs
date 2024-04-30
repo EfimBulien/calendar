@@ -2,9 +2,9 @@
 {
     internal class Language
     {
-        public string Name;
-        public string PathPicture;
-        public bool isSelected;
+        public string? Name;
+        public string? PathPicture;
+        public bool IsSelected;
 
         public static Language Create(string name, string pathPicture, bool isSelected = false)
         {
@@ -12,7 +12,7 @@
             {
                 Name = name,
                 PathPicture = pathPicture,
-                isSelected = isSelected
+                IsSelected = isSelected
             };
             return language;
         }

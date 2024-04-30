@@ -1,10 +1,8 @@
-﻿using System.Windows;
-using Будни_Программиста.View;
-using Будни_Программиста.ViewModel;
+﻿using Будни_Программиста.ViewModel;
 
-namespace Будни_Программиста
+namespace Будни_Программиста.View
 {
-    public partial class MainWindow : Window
+    public partial class MainWindow
     {
         public MainWindow()
         {

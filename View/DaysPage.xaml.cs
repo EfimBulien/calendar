@@ -1,27 +1,22 @@
 ﻿using System.ComponentModel;
-using System.Windows.Controls;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using Будни_Программиста.Model;
 using Будни_Программиста.ViewModel;
 
 namespace Будни_Программиста.View
 {
-    public partial class DaysPage : Page
+    public partial class DaysPage
     {
         public DateTime SelectedMonth { get; set; }
-
-
+        
         public DaysPage()
         {
             InitializeComponent();
-            Loaded += (sender, e) =>
+            Loaded += (sender, _) =>
             {
-                if (DataContext is MainWindowViewModel viewModel)
-                {
-                    viewModel.PropertyChanged += ViewModel_PropertyChanged;
-                    GenerateDays();
-                }
+                if (DataContext is not MainWindowViewModel viewModel) return;
+                viewModel.PropertyChanged += ViewModel_PropertyChanged!;
+                GenerateDays();
             };
         }
 
@@ -29,31 +24,38 @@ namespace Будни_Программиста.View
         {
             Days.Children.Clear();
 
-            DateTime selectedMonth = SelectedMonth;
+            var selectedMonth = SelectedMonth;
             if (DataContext is MainWindowViewModel viewModel) selectedMonth = viewModel.SelectedMonth;
 
-            int daysInMonth = DateTime.DaysInMonth(selectedMonth.Year, selectedMonth.Month);
+            var daysInMonth = DateTime.DaysInMonth(selectedMonth.Year, selectedMonth.Month);
 
-            for (int day = 1; day <= daysInMonth; day++)
+            for (var day = 1; day <= daysInMonth; day++)
             {
                 ImageBrush imageBrush = new(new BitmapImage(new Uri("none.jpg", UriKind.Relative)));
-                MainWindowViewModel mainWindowViewModel = new MainWindowViewModel();
-                List<Language> languages = mainWindowViewModel.GetCurrentDay($"{day}.{selectedMonth.Month}.{selectedMonth.Year}");
-                DayCardView dayCard = new();
-                dayCard.CurrentDayText.Text = day.ToString();
-                dayCard.CurrentDayImage.Background = null;
-                foreach (Language language in  languages)
+                var mainWindowViewModel = new MainWindowViewModel();
+                var languages = mainWindowViewModel.GetCurrentDay($"{day}.{selectedMonth.Month}.{selectedMonth.Year}");
+                DayCardView dayCard = new()
                 {
-                    if (language.isSelected)
+                    CurrentDayText =
+                    {
+                        Text = day.ToString()
+                    },
+                    CurrentDayImage =
+                    {
+                        Background = null
+                    }
+                };
+                
+                if (languages != null)
+                {
+                    foreach (var unused in languages.Where(language => language.IsSelected))
                     {
                         dayCard.CurrentDayImage.Background = imageBrush;
                         break;
                     }
                 }
-                if (dayCard.CurrentDayImage.Background == null)
-                {
-                    dayCard.CurrentDayImage.Background = imageBrush;
-                }
+                
+                dayCard.CurrentDayImage.Background ??= imageBrush;
                 Days.Children.Add(dayCard);
             }
         }
