@@ -2,16 +2,18 @@
 {
     internal class Language
     {
-        private string Name;
-        private string PathPicture;
-        private bool isSelected;
+        public string Name;
+        public string PathPicture;
+        public bool isSelected;
 
-        public static Language Create(string name, string pathPicture)
+        public static Language Create(string name, string pathPicture, bool isSelected = false)
         {
-            Language language = new Language();
-            language.Name = name;
-            language.PathPicture = pathPicture;
-            language.isSelected = false;
+            Language language = new()
+            {
+                Name = name,
+                PathPicture = pathPicture,
+                isSelected = isSelected
+            };
             return language;
         }
     }

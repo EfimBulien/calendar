@@ -1,5 +1,8 @@
 ﻿using System.ComponentModel;
 using System.Windows.Controls;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using Будни_Программиста.Model;
 using Будни_Программиста.ViewModel;
 
 namespace Будни_Программиста.View
@@ -31,11 +34,26 @@ namespace Будни_Программиста.View
 
             int daysInMonth = DateTime.DaysInMonth(selectedMonth.Year, selectedMonth.Month);
 
-       
             for (int day = 1; day <= daysInMonth; day++)
             {
-                DayCardView dayCard = new DayCardView();
+                ImageBrush imageBrush = new(new BitmapImage(new Uri("none.jpg", UriKind.Relative)));
+                MainWindowViewModel mainWindowViewModel = new MainWindowViewModel();
+                List<Language> languages = mainWindowViewModel.GetCurrentDay($"{day}.{selectedMonth.Month}.{selectedMonth.Year}");
+                DayCardView dayCard = new();
                 dayCard.CurrentDayText.Text = day.ToString();
+                dayCard.CurrentDayImage.Background = null;
+                foreach (Language language in  languages)
+                {
+                    if (language.isSelected)
+                    {
+                        dayCard.CurrentDayImage.Background = imageBrush;
+                        break;
+                    }
+                }
+                if (dayCard.CurrentDayImage.Background == null)
+                {
+                    dayCard.CurrentDayImage.Background = imageBrush;
+                }
                 Days.Children.Add(dayCard);
             }
         }

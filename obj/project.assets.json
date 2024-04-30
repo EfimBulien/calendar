@@ -201,11 +201,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\efimb\\Downloads\\calendar-master\\Будни Программиста.csproj",
+      "projectUniqueName": "C:\\Users\\efimb\\Documents\\GitHub\\calendar\\Будни Программиста.csproj",
       "projectName": "Будни Программиста",
-      "projectPath": "C:\\Users\\efimb\\Downloads\\calendar-master\\Будни Программиста.csproj",
+      "projectPath": "C:\\Users\\efimb\\Documents\\GitHub\\calendar\\Будни Программиста.csproj",
       "packagesPath": "C:\\Users\\efimb\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\efimb\\Downloads\\calendar-master\\obj\\",
+      "outputPath": "C:\\Users\\efimb\\Documents\\GitHub\\calendar\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

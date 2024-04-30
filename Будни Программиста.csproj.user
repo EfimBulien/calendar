@@ -7,7 +7,7 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="DayCardView.xaml.cs">
+    <Compile Update="View\DayCardView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\DaysPage.xaml.cs">
@@ -15,7 +15,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="DayCardView.xaml">
+    <Page Update="View\DayCardView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\DaysPage.xaml">

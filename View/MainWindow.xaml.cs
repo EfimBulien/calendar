@@ -11,6 +11,7 @@ namespace Будни_Программиста
             InitializeComponent();
             var viewModel = new MainWindowViewModel();
             DataContext = viewModel;
+            viewModel.GetData();
             FramePage.Content = new DaysPage() 
             { 
                 DataContext = viewModel 

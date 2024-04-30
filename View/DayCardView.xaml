@@ -11,6 +11,8 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <TextBlock x:Name="CurrentDayText" Grid.Row="0" Text="{Binding Day}" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        <Image x:Name="CurrentDayImage" Grid.Row="1"/>
+        <Button x:Name="CurrentDayImage" Grid.Row="1">
+            
+        </Button>
     </Grid>
 </UserControl>

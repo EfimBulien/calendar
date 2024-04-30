@@ -7,7 +7,7 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="DaysPage">
     <Grid>
-        <WrapPanel x:Name="Days" Orientation="Vertical">
+        <WrapPanel x:Name="Days" Orientation="Horizontal">
 
         </WrapPanel>
     </Grid>
