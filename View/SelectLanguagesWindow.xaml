@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:viewModel="clr-namespace:Будни_Программиста.ViewModel"
+        xmlns:viewModel="clr-namespace:Будни_Программиста.ViewModel" d:DataContext="{d:DesignInstance Type=viewModel:SelectLanguagesWindowViewModel}"
         mc:Ignorable="d"
         Title="SelectLanguagesWindow" Height="600" Width="450"
         DataContext="{StaticResource SelectLanguagesWindowViewModel}">
@@ -15,11 +15,11 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <Button Content="Назад" Command="{Binding}" Click="ButtonBase_OnClick" Grid.Row="0" 
+        <Button Content="Назад" Click="ButtonBase_OnClick" Grid.Row="0" 
                 HorizontalAlignment="Left" VerticalAlignment="Top" Margin="10">
 
         </Button>
-        <Button Content="Сохранить" Command="{Binding }" Grid.Row="0"
+        <Button Content="Сохранить" Command="{Binding SaveDayCommand}" Grid.Row="0"
                 HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10">
         </Button>
         <Grid Grid.Row="1">
@@ -35,19 +35,18 @@
                 <RowDefinition/>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <CheckBox x:Name="aaa" Style="{StaticResource MaterialDesignFilterChipCheckBox}" Content="С++" Grid.Column="0" Grid.Row="0"></CheckBox>
-            <CheckBox Style="{StaticResource MaterialDesignFilterChipCheckBox}" Content="Java" Grid.Column="0" Grid.Row="1"></CheckBox>
-            <CheckBox Style="{StaticResource MaterialDesignFilterChipCheckBox}" Content="Python" Grid.Column="0" Grid.Row="2"></CheckBox>
-            <CheckBox Style="{StaticResource MaterialDesignFilterChipCheckBox}" Content="JavaScript" Grid.Column="0" Grid.Row="3"></CheckBox>
-            <CheckBox Style="{StaticResource MaterialDesignFilterChipCheckBox}" Content="C#" Grid.Column="0" Grid.Row="4"></CheckBox>
-            <CheckBox Style="{StaticResource MaterialDesignFilterChipCheckBox}" Content="Assembler" Grid.Column="0" Grid.Row="5"></CheckBox>
-            <Image Source="C:\Users\efimb\Documents\GitHub\calendar\bin\Debug\net8.0-windows\cpp.png" Grid.Column="1" Grid.Row="0"/>
-            <Image Source="C:\Users\efimb\Documents\GitHub\calendar\bin\Debug\net8.0-windows\java.png" Grid.Column="1" Grid.Row="1"/>
-            <Image Source="C:\Users\efimb\Documents\GitHub\calendar\bin\Debug\net8.0-windows\python.png" Grid.Column="1" Grid.Row="2"/>
-            <Image Source="C:\Users\efimb\Documents\GitHub\calendar\bin\Debug\net8.0-windows\js.png" Grid.Column="1" Grid.Row="3"/>
-            <Image Source="C:\Users\efimb\Documents\GitHub\calendar\bin\Debug\net8.0-windows\csharp.png" Grid.Column="1" Grid.Row="4"/>
-            <Image Source="C:\Users\efimb\Documents\GitHub\calendar\bin\Debug\net8.0-windows\asm.png" Grid.Column="1" Grid.Row="5"/>
-
+            <CheckBox x:Name="Cpp" Style="{StaticResource MaterialDesignFilterChipCheckBox}" Content="С++" IsChecked="{Binding Cpp}" Grid.Column="0" Grid.Row="0"></CheckBox>
+            <CheckBox x:Name="Java" Style="{StaticResource MaterialDesignFilterChipCheckBox}" Content="Java" IsChecked="{Binding Java}" Grid.Column="0" Grid.Row="1"></CheckBox>
+            <CheckBox x:Name="Python" Style="{StaticResource MaterialDesignFilterChipCheckBox}" Content="Python" IsChecked="{Binding Python}" Grid.Column="0" Grid.Row="2"></CheckBox>
+            <CheckBox x:Name="JS" Style="{StaticResource MaterialDesignFilterChipCheckBox}" Content="JavaScript" IsChecked="{Binding JS}" Grid.Column="0" Grid.Row="3"></CheckBox>
+            <CheckBox x:Name="Cs" Style="{StaticResource MaterialDesignFilterChipCheckBox}" Content="C#" IsChecked="{Binding Cs}" Grid.Column="0" Grid.Row="4"></CheckBox>
+            <CheckBox x:Name="Asm" Style="{StaticResource MaterialDesignFilterChipCheckBox}" Content="Assembler" IsChecked="{Binding Asm}" Grid.Column="0" Grid.Row="5"></CheckBox>
+            <Image Source="/cpp.png" Grid.Column="1" Grid.Row="0"/>
+            <Image Source="/java.png" Grid.Column="1" Grid.Row="1"/>
+            <Image Source="/python.png" Grid.Column="1" Grid.Row="2"/>
+            <Image Source="/js.png" Grid.Column="1" Grid.Row="3"/>
+            <Image Source="/csharp.png" Grid.Column="1" Grid.Row="4"/>
+            <Image Source="/asm.png" Grid.Column="1" Grid.Row="5"/>
         </Grid>
     </Grid>
 </Window>

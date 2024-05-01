@@ -9,7 +9,7 @@ namespace Будни_Программиста.View
             InitializeComponent();
             var viewModel = new MainWindowViewModel();
             DataContext = viewModel;
-            viewModel.GetData();
+            MainWindowViewModel.GetData();
             FramePage.Content = new DaysPage() 
             { 
                 DataContext = viewModel 

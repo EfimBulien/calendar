@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using Будни_Программиста.Model;
 using Будни_Программиста.ViewModel;
 
 namespace Будни_Программиста.View
@@ -31,9 +32,7 @@ namespace Будни_Программиста.View
 
             for (var day = 1; day <= daysInMonth; day++)
             {
-                ImageBrush imageBrush = new(new BitmapImage(new Uri("none.jpg", UriKind.Relative)));
-                var mainWindowViewModel = new MainWindowViewModel();
-                var languages = mainWindowViewModel.GetCurrentDay($"{day}.{selectedMonth.Month}.{selectedMonth.Year}");
+                List<Language> languages = MainWindowViewModel.GetCurrentDay($"{day}.{selectedMonth.Month}.{selectedMonth.Year}");
                 DayCardView dayCard = new()
                 {
                     CurrentDayText =
@@ -45,17 +44,15 @@ namespace Будни_Программиста.View
                         Background = null
                     }
                 };
-                
-                if (languages != null)
+                foreach (var language in languages)
                 {
-                    foreach (var unused in languages.Where(language => language.IsSelected))
+                    if (language.IsSelected)
                     {
+                        ImageBrush imageBrush = new(new BitmapImage(new Uri($"../../../{language.PathPicture}", UriKind.Relative)));
                         dayCard.CurrentDayImage.Background = imageBrush;
                         break;
                     }
                 }
-                
-                dayCard.CurrentDayImage.Background ??= imageBrush;
                 Days.Children.Add(dayCard);
             }
         }

@@ -1,4 +1,5 @@
 ﻿using System.Windows.Input;
+using Будни_Программиста.Model;
 
 namespace Будни_Программиста.ViewModel.Helpers
 {
@@ -6,7 +7,7 @@ namespace Будни_Программиста.ViewModel.Helpers
     {
         private readonly Action<object> _execute;
         private readonly Func<object, bool>? _canExecute;
-
+        private Action<string, List<Language>?> saveDay;
 
         public event EventHandler? CanExecuteChanged
         {
@@ -18,6 +19,11 @@ namespace Будни_Программиста.ViewModel.Helpers
         {
             _execute = execute;
             _canExecute = canExecute;
+        }
+
+        public BindableCommand(Action<string, List<Language>?> saveDay)
+        {
+            this.saveDay = saveDay;
         }
 
         public bool CanExecute(object? parameter)

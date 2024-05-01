@@ -9,5 +9,10 @@ namespace Будни_Программиста.View
             InitializeComponent();
             DataContext = new DayCardViewModel();
         }
+
+        private void CurrentDayImage_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            SelectLanguagesWindowViewModel.date = CurrentDayText.Text;
+        }
     }
 }

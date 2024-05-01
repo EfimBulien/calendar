@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Windows;
 using System.Windows.Input;
 using Будни_Программиста.Model;
 using Будни_Программиста.ViewModel.Helpers;
@@ -7,19 +8,20 @@ namespace Будни_Программиста.ViewModel
 {
     internal class MainWindowViewModel : BindingHelper
     {
-        public List<DatesChoice> datesChoices = [];
+        public static List<DatesChoice> datesChoices = [];
         public static List<Language> default_languages = [];
-        public DateTime selectedMonth;
+        public static DateTime selectedMonth = DateTime.Today;
         private const string Path = "data.json";
 
         public DateTime SelectedMonth
         {
-            get { return selectedMonth; }
+            get { MessageBox.Show($"get {selectedMonth}"); return selectedMonth; }
             set
             {
                 if (selectedMonth != value)
                 {
                     selectedMonth = value;
+                    MessageBox.Show($"set {selectedMonth}");
                     OnPropertyChanged();
                 }
             }
@@ -30,7 +32,6 @@ namespace Будни_Программиста.ViewModel
 
         public MainWindowViewModel() 
         {
-            SelectedMonth = DateTime.Today;
             PreviousMonthCommand = new BindableCommand(ExecutePreviousMonth);
             NextMonthCommand = new BindableCommand(ExecuteNextMonth);
         }
@@ -45,7 +46,7 @@ namespace Будни_Программиста.ViewModel
             SelectedMonth = SelectedMonth.AddMonths(1);
         }
 
-        public void GetData()
+        public static void GetData()
         {
             default_languages.Add(Language.Create("C++", "cpp.png"));
             default_languages.Add(Language.Create("Java", "java.png"));
@@ -59,9 +60,10 @@ namespace Будни_Программиста.ViewModel
                 File.Create(Path).Close();
             }
             datesChoices = Files.Deserialize<List<DatesChoice>>(Path);
+            datesChoices ??= [];
         }
 
-        private List<object> GetChoiceByDate(string date)
+        public static List<object> GetChoiceByDate(string date)
         {
             for (int i = 0; i < datesChoices.Count; i++)
             {
@@ -73,14 +75,14 @@ namespace Будни_Программиста.ViewModel
             return [];
         }
 
-        public List<Language>? GetCurrentDay(string date)
+        public static List<Language>? GetCurrentDay(string date)
         {
             List<object> choices = GetChoiceByDate(date);
             if (choices.Count > 0) return datesChoices[Convert.ToInt32(choices[0])].Languages;
-            return [];
+            return default_languages;
         }
 
-        private void SaveDay(string date, List<Language>? languages)
+        public static void SaveDay(string date, List<Language>? languages)
         {
             List<object> choices = GetChoiceByDate(date);
             if (choices.Count > 0)

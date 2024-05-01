@@ -1,4 +1,6 @@
-﻿namespace Будни_Программиста.Model
+﻿using System.Security.Policy;
+
+namespace Будни_Программиста.Model
 {
     internal class Language
     {
