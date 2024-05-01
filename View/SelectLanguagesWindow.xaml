@@ -9,8 +9,19 @@
         DataContext="{StaticResource SelectLanguagesWindowViewModel}">
     <Window.Resources>
         <viewModel:SelectLanguagesWindowViewModel x:Key="SelectLanguagesWindowViewModel"/>
+        <Storyboard x:Key="FadeIn">
+            <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0.0" To="1.0" Duration="0:0:1"/>
+        </Storyboard>
+        <Storyboard x:Key="FadeOut">
+            <DoubleAnimation Storyboard.TargetProperty="Opacity" From="1.0" To="0.0" Duration="0:0:1"/>
+        </Storyboard>
     </Window.Resources>
     <Grid>
+        <Grid.Triggers>
+            <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                <BeginStoryboard Storyboard="{StaticResource FadeIn}"/>
+            </EventTrigger>
+        </Grid.Triggers>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition/>

@@ -6,8 +6,20 @@
       mc:Ignorable="d"
       d:DesignHeight="450" d:DesignWidth="800"
       Title="DaysPage">
+    <Page.Resources>
+        <Storyboard x:Key="FadeIn">
+            <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0.0" To="1.0" Duration="0:0:1"/>
+        </Storyboard>
+        <Storyboard x:Key="FadeOut">
+            <DoubleAnimation Storyboard.TargetProperty="Opacity" From="1.0" To="0.0" Duration="0:0:1"/>
+        </Storyboard>
+    </Page.Resources>
     <Grid>
-        <WrapPanel x:Name="Days" Orientation="Horizontal">
-        </WrapPanel>
+        <Grid.Triggers>
+            <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                <BeginStoryboard Storyboard="{StaticResource FadeIn}"/>
+            </EventTrigger>
+        </Grid.Triggers>
+        <WrapPanel x:Name="Days" Orientation="Horizontal"></WrapPanel>
     </Grid>
 </Page>

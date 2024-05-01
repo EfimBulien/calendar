@@ -5,7 +5,26 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:viewmodel="clr-namespace:Будни_Программиста.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:MainWindowViewModel}"
         mc:Ignorable="d"
         Title="Будни Программиста" Height="350" Width="350">
+    <Window.Resources>
+        <Storyboard x:Key="FadeIn">
+            <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0.0" To="1.0" Duration="0:0:1"/>
+        </Storyboard>
+        <Storyboard x:Key="FadeOut">
+            <DoubleAnimation Storyboard.TargetProperty="Opacity" From="1.0" To="0.0" Duration="0:0:1"/>
+        </Storyboard>
+        <Storyboard x:Key="PageFadeIn">
+            <DoubleAnimation Storyboard.TargetName="FramePage" Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:1"/>
+        </Storyboard>
+        <Storyboard x:Key="PageFadeOut">
+            <DoubleAnimation Storyboard.TargetName="FramePage" Storyboard.TargetProperty="Opacity" From="1" To="0" Duration="0:0:1"/>
+        </Storyboard>
+    </Window.Resources>
     <Grid>
+        <Grid.Triggers>
+            <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+                <BeginStoryboard Storyboard="{StaticResource FadeIn}"/>
+            </EventTrigger>
+        </Grid.Triggers>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -21,6 +40,21 @@
                    HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"/>
         <Button Content="Вперед" Command="{Binding NextMonthCommand}" Grid.Row="0" Grid.Column="2" 
                 HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10"/>
-        <Frame x:Name="FramePage" Grid.Row="1" NavigationUIVisibility="Hidden" Grid.ColumnSpan="3" Grid.Column="0" />
+        <Frame x:Name="FramePage" Grid.Row="1" NavigationUIVisibility="Hidden" Grid.ColumnSpan="3" Grid.Column="0">
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup>
+                    <VisualState x:Name="Navigating">
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:1"/>
+                        </Storyboard>
+                    </VisualState>
+                    <VisualState x:Name="Navigated">
+                        <Storyboard>
+                            <DoubleAnimation Storyboard.TargetProperty="Opacity" To="1" Duration="0:0:1"/>
+                        </Storyboard>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Frame>
     </Grid>
 </Window>

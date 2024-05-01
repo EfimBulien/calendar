@@ -13,10 +13,10 @@ public partial class SelectLanguagesWindow : Window
         InitializeComponent();
         List<CheckBox> buttons = [Cpp, Java, Python, JS, Cs, Asm];
         DataContext = new SelectLanguagesWindowViewModel();
-        MessageBox.Show(MainWindowViewModel.selectedMonth.ToString());
+        //MessageBox.Show(MainWindowViewModel.selectedMonth.ToString());
         SelectLanguagesWindowViewModel.date = $"{SelectLanguagesWindowViewModel.date}.{MainWindowViewModel.selectedMonth.Month}." + $"{MainWindowViewModel.selectedMonth.Year}";
         List<object> list = MainWindowViewModel.GetChoiceByDate(SelectLanguagesWindowViewModel.date);
-        MessageBox.Show($"{SelectLanguagesWindowViewModel.date} - {list.Count}");
+        //MessageBox.Show($"{SelectLanguagesWindowViewModel.date} - {list.Count}");
         if (list.Count > 0)
         {
             List<Language> languages = (List<Language>)list[1];

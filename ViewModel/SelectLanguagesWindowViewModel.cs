@@ -50,13 +50,13 @@ internal class SelectLanguagesWindowViewModel : BindingHelper
     private void SaveDay(object parameter)
     {
         List<bool> bools = [cpp, java, python, js, cs, asm];
-        MessageBox.Show($"{python}");
+        //MessageBox.Show($"{python}");
         List<Language> languages = MainWindowViewModel.default_languages;
         for (int i = 0; i < bools.Count; i++)
         {
             languages[i].IsSelected = bools[i];
         }
         MainWindowViewModel.SaveDay(date, languages);
-        MessageBox.Show("Успешно сохранено");
+        //MessageBox.Show("Успешно сохранено");
     }
 }

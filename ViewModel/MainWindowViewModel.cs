@@ -15,13 +15,17 @@ namespace Будни_Программиста.ViewModel
 
         public DateTime SelectedMonth
         {
-            get { MessageBox.Show($"get {selectedMonth}"); return selectedMonth; }
+            get 
+            { 
+                //MessageBox.Show($"get {selectedMonth}"); 
+                return selectedMonth; 
+            }
             set
             {
                 if (selectedMonth != value)
                 {
                     selectedMonth = value;
-                    MessageBox.Show($"set {selectedMonth}");
+                    //MessageBox.Show($"set {selectedMonth}");
                     OnPropertyChanged();
                 }
             }
@@ -44,6 +48,7 @@ namespace Будни_Программиста.ViewModel
         private void ExecuteNextMonth(object parameter)
         {
             SelectedMonth = SelectedMonth.AddMonths(1);
+
         }
 
         public static void GetData()
@@ -55,10 +60,7 @@ namespace Будни_Программиста.ViewModel
             default_languages.Add(Language.Create("C#", "csharp.png"));
             default_languages.Add(Language.Create("Assembler", "asm.png"));
             default_languages.Add(Language.Create("None", "none.jpg", true));
-            if (!File.Exists(Path))
-            {
-                File.Create(Path).Close();
-            }
+            if (!File.Exists(Path)) File.Create(Path).Close();
             datesChoices = Files.Deserialize<List<DatesChoice>>(Path);
             datesChoices ??= [];
         }
