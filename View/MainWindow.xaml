@@ -40,7 +40,7 @@
                    HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="18"/>
         <Button Content="Вперед" Command="{Binding NextMonthCommand}" Grid.Row="0" Grid.Column="2" 
                 HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10"/>
-        <Frame x:Name="FramePage" Grid.Row="1" NavigationUIVisibility="Hidden" Grid.ColumnSpan="3" Grid.Column="0">
+        <Frame x:Name="FramePage" Content="{Binding FramePage}" Grid.Row="1" NavigationUIVisibility="Hidden" Grid.ColumnSpan="3" Grid.Column="0">
             <VisualStateManager.VisualStateGroups>
                 <VisualStateGroup>
                     <VisualState x:Name="Navigating">

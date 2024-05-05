@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel;
+using System.Windows;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using Будни_Программиста.Model;
@@ -9,14 +10,13 @@ namespace Будни_Программиста.View
     public partial class DaysPage
     {
         public DateTime SelectedMonth { get; set; }
-        
+
         public DaysPage()
         {
             InitializeComponent();
             Loaded += (sender, _) =>
             {
                 if (DataContext is not MainWindowViewModel viewModel) return;
-                viewModel.PropertyChanged += ViewModel_PropertyChanged!;
                 GenerateDays();
             };
         }
@@ -55,11 +55,6 @@ namespace Будни_Программиста.View
                 }
                 Days.Children.Add(dayCard);
             }
-        }
-
-        private void ViewModel_PropertyChanged(object sender, PropertyChangedEventArgs e)
-        {
-            if (e.PropertyName == "SelectedMonth") GenerateDays();
         }
     }
 }

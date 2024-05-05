@@ -1,7 +1,9 @@
 ﻿using System.IO;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
 using Будни_Программиста.Model;
+using Будни_Программиста.View;
 using Будни_Программиста.ViewModel.Helpers;
 
 namespace Будни_Программиста.ViewModel
@@ -9,58 +11,86 @@ namespace Будни_Программиста.ViewModel
     internal class MainWindowViewModel : BindingHelper
     {
         public static List<DatesChoice> datesChoices = [];
-        public static List<Language> default_languages = [];
+        public static List<Language> default_languages
+        {
+            get
+            {
+                return
+                [
+                Language.Create("C++", "cpp.png"),
+                Language.Create("Java", "java.png"),
+                Language.Create("Python", "python.png"),
+                Language.Create("JavaScript", "js.png"),
+                Language.Create("C#", "csharp.png"),
+                Language.Create("Assembler", "asm.png"),
+                Language.Create("None", "none.jpg", true)
+                ];
+            }
+            set { return; }
+        }
         public static DateTime selectedMonth = DateTime.Today;
+        public static Frame framePage = new();
         private const string Path = "data.json";
 
         public DateTime SelectedMonth
         {
-            get 
-            { 
-                //MessageBox.Show($"get {selectedMonth}"); 
-                return selectedMonth; 
-            }
+            get { return selectedMonth; }
             set
             {
                 if (selectedMonth != value)
                 {
                     selectedMonth = value;
-                    //MessageBox.Show($"set {selectedMonth}");
                     OnPropertyChanged();
                 }
             }
         }
-      
+        public Frame FramePage
+        {
+            get { return framePage; }
+            set
+            {
+                if (framePage != value)
+                {
+                    framePage = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
         public ICommand PreviousMonthCommand { get; private set; }
         public ICommand NextMonthCommand { get; private set; }
 
-        public MainWindowViewModel() 
+
+        public MainWindowViewModel()
         {
             PreviousMonthCommand = new BindableCommand(ExecutePreviousMonth);
             NextMonthCommand = new BindableCommand(ExecuteNextMonth);
         }
-    
+
         private void ExecutePreviousMonth(object parameter)
         {
             SelectedMonth = SelectedMonth.AddMonths(-1);
+            MainWindowViewModel.framePage.Content = new DaysPage()
+            {
+                DataContext = new MainWindowViewModel()
+            };
         }
 
         private void ExecuteNextMonth(object parameter)
         {
             SelectedMonth = SelectedMonth.AddMonths(1);
-
+            MainWindowViewModel.framePage.Content = new DaysPage()
+            {
+                DataContext = new MainWindowViewModel()
+            };
         }
 
         public static void GetData()
         {
-            default_languages.Add(Language.Create("C++", "cpp.png"));
-            default_languages.Add(Language.Create("Java", "java.png"));
-            default_languages.Add(Language.Create("Python", "python.png"));
-            default_languages.Add(Language.Create("JavaScript", "js.png"));
-            default_languages.Add(Language.Create("C#", "csharp.png"));
-            default_languages.Add(Language.Create("Assembler", "asm.png"));
-            default_languages.Add(Language.Create("None", "none.jpg", true));
-            if (!File.Exists(Path)) File.Create(Path).Close();
+            if (!File.Exists(Path))
+            {
+                File.Create(Path).Close();
+            }
             datesChoices = Files.Deserialize<List<DatesChoice>>(Path);
             datesChoices ??= [];
         }
@@ -90,16 +120,17 @@ namespace Будни_Программиста.ViewModel
             if (choices.Count > 0)
             {
                 datesChoices[Convert.ToInt32(choices[0])].Languages = languages;
-                return;
             }
-            datesChoices.Add(DatesChoice.Create(date, languages));
+            else
+            {
+                datesChoices.Add(DatesChoice.Create(date, languages));
+            }
             Files.Serialize(datesChoices, Path);
         }
-
-        private void ClearDay(string date)
+        public static void ClearDay(string date)
         {
             List<object> choices = GetChoiceByDate(date);
-            if (choices.Count > 0) datesChoices.Remove((DatesChoice)choices[1]);
+            if (choices.Count > 0) datesChoices.RemoveAt(Convert.ToInt32(choices[0]));
             Files.Serialize(datesChoices, Path);
         }
     }

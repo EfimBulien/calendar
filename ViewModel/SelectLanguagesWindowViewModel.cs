@@ -1,6 +1,9 @@
+using System.Diagnostics;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
 using Будни_Программиста.Model;
+using Будни_Программиста.View;
 using Будни_Программиста.ViewModel.Helpers;
 
 namespace Будни_Программиста.ViewModel;
@@ -50,13 +53,16 @@ internal class SelectLanguagesWindowViewModel : BindingHelper
     private void SaveDay(object parameter)
     {
         List<bool> bools = [cpp, java, python, js, cs, asm];
-        //MessageBox.Show($"{python}");
         List<Language> languages = MainWindowViewModel.default_languages;
         for (int i = 0; i < bools.Count; i++)
         {
             languages[i].IsSelected = bools[i];
         }
         MainWindowViewModel.SaveDay(date, languages);
-        //MessageBox.Show("Успешно сохранено");
+        MainWindowViewModel.framePage.Content = new DaysPage()
+        {
+            DataContext = new MainWindowViewModel()
+        };
+        MessageBox.Show("Успешно сохранено");
     }
 }

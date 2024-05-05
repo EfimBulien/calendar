@@ -12,7 +12,8 @@ namespace Будни_Программиста.View
 
         private void CurrentDayImage_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            SelectLanguagesWindowViewModel.date = CurrentDayText.Text;
+            SelectLanguagesWindowViewModel.date = $"{CurrentDayText.Text}.{MainWindowViewModel.selectedMonth.Month}." +
+            $"{MainWindowViewModel.selectedMonth.Year}";
         }
     }
 }

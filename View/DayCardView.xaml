@@ -12,12 +12,12 @@
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="0" x:Name="CurrentDayText" FontSize="20" 
                    VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        <Button Grid.Row="1" x:Name="CurrentDayImage" Command="{Binding SelectLanguagesCommand}" 
-                Background="{Binding CurrentDayImage}" Click="CurrentDayImage_Click">
+        <Button Grid.Row="1" x:Name="CurrentDayImage" Command="{Binding SelectLanguagesCommand}"
+                Click="CurrentDayImage_Click" MouseRightButtonDown="CurrentDayImage_Click">
             <Button.ContextMenu>
                 <ContextMenu>
                     <MenuItem Header="Посмотреть этот день" Command="{Binding SelectLanguagesCommand}"/>
-                    <MenuItem Header="Очистить все об этом дне"/>
+                    <MenuItem Header="Очистить все об этом дне" Command="{Binding ClearDayCommand}"/>
                 </ContextMenu>
             </Button.ContextMenu>
         </Button>
